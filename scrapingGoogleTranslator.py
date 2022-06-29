@@ -5,10 +5,6 @@ Created on Wed Feb  9 10:37:21 2022
 
 @author: jhonnyrv
 """
-
-
-
-
 from selenium import webdriver
 from datetime import datetime
 from time import sleep 
@@ -28,13 +24,11 @@ import random
 import pandas as pd
 import re
 import ast
-from mongoDB import *
 from itertools import permutations
 import sys
 from dateutil import parser
 import numpy as np
 from webdriver_manager.chrome import ChromeDriverManager
-from mongoDB import *
 import time
 
 
@@ -308,16 +302,6 @@ class google_translator:
                     pass
                     
                 pass
-    
-    
-# =============================================================================
-# Descargamos la data que vamos a traducir 
-# =============================================================================
-
-database = 'CarmenMelendez'
-client = auth_mongo("nucleo.analitico", 'PzDyzpJwM5T;@dY', database)
-df = extract_mongo(client, database, 't_aecarri_comentarios')
-
 
 # =============================================================================
 # Limpiamos la data
