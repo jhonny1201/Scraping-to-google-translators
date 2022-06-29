@@ -7,8 +7,7 @@ Created on Wed Feb  9 10:37:21 2022
 """
 from selenium import webdriver
 from datetime import datetime
-from time import sleep 
-#from webdriver_manager.chrome import ChromeDriverManager 
+import time
 from selenium.webdriver.chrome.options import Options  
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
@@ -16,8 +15,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
-# from sentiment import *
-import requests
 from bs4 import BeautifulSoup
 import json
 import random
@@ -29,11 +26,6 @@ import sys
 from dateutil import parser
 import numpy as np
 from webdriver_manager.chrome import ChromeDriverManager
-import time
-
-
-
-
 
 # =============================================================================
 # Google translator scraping
@@ -366,7 +358,3 @@ driver.choose_idiom2('ingl')
 
 df = df.head(10)
 df['text_traduction'] = df.apply(lambda x: driver.text_translate(x, 'text'), axis=1)
-
-
-
-
